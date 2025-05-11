@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
@@ -7,13 +6,13 @@ const HeroSection: React.FC = () => {
   return (
     <section className="pt-16 pb-24 px-4 md:px-8 bg-gradient-to-b from-wiseLight to-white">
       <div className="container mx-auto">
-        <div className="flex flex-col items-center text-center max-w-3xl mx-auto">
+        <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-wiseDarkGreen leading-tight">
             Получите доступ к{" "}
             <span className="text-gradient">международным финансам</span> с
             аккаунтом WISE
           </h1>
-          <p className="text-gray-700 text-lg mb-8">
+          <p className="text-gray-700 text-lg mb-8 max-w-3xl">
             Мы предлагаем верифицированные аккаунты WISE для международных
             переводов, мультивалютных операций и глобальных платежей.
           </p>
