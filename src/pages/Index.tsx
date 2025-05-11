@@ -4,6 +4,7 @@ import ProductCard from "@/components/ProductCard";
 import HowItWorks from "@/components/HowItWorks";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import AccountCalculator from "@/components/AccountCalculator";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 
