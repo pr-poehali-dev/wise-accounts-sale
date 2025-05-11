@@ -143,6 +143,33 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section className="py-16 px-4 md:px-8 bg-wiseLight">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 text-wiseDarkGreen">
+              Наши предложения
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Выберите подходящий тип аккаунта Wise в соответствии с вашими
+              потребностями
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {products.map((product, index) => (
+              <ProductCard
+                key={index}
+                title={product.title}
+                price={product.price}
+                features={product.features}
+                popular={product.popular}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
@@ -172,33 +199,6 @@ const Index = () => {
                 </h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 px-4 md:px-8 bg-wiseLight">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-wiseDarkGreen">
-              Наши предложения
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Выберите подходящий тип аккаунта Wise в соответствии с вашими
-              потребностями
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {products.map((product, index) => (
-              <ProductCard
-                key={index}
-                title={product.title}
-                price={product.price}
-                features={product.features}
-                popular={product.popular}
-              />
             ))}
           </div>
         </div>
