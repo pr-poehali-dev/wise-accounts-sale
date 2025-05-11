@@ -151,21 +151,56 @@ const Index = () => {
               Наши предложения
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Выберите подходящий тип аккаунта Wise в соответствии с вашими
+              Рассчитайте стоимость аккаунта Wise в соответствии с вашими
               потребностями
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {products.map((product, index) => (
-              <ProductCard
-                key={index}
-                title={product.title}
-                price={product.price}
-                features={product.features}
-                popular={product.popular}
-              />
-            ))}
+          {/* Калькулятор аккаунтов вместо карточек продуктов */}
+          <div className="max-w-4xl mx-auto">
+            <AccountCalculator />
+
+            <div className="mt-8 bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold text-wiseDarkGreen mb-3">
+                Почему выбирают наш сервис
+              </h3>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <div className="mr-2 mt-1 text-wiseGreen">
+                    <Icon name="CheckCircle" size={18} />
+                  </div>
+                  <span className="text-gray-700">
+                    Полностью настроенные аккаунты с доступом к глобальной
+                    финансовой системе
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="mr-2 mt-1 text-wiseGreen">
+                    <Icon name="CheckCircle" size={18} />
+                  </div>
+                  <span className="text-gray-700">
+                    Верификация различного уровня для разных потребностей
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="mr-2 mt-1 text-wiseGreen">
+                    <Icon name="CheckCircle" size={18} />
+                  </div>
+                  <span className="text-gray-700">
+                    Возможность получения физической карты для платежей по всему
+                    миру
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <div className="mr-2 mt-1 text-wiseGreen">
+                    <Icon name="CheckCircle" size={18} />
+                  </div>
+                  <span className="text-gray-700">
+                    Техническая поддержка на русском языке
+                  </span>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
