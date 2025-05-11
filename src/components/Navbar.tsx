@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
-import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,28 +14,37 @@ const Navbar = () => {
     }
   };
 
+  // Функция для скролла в самый верх страницы
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setMobileMenuOpen(false);
+  };
+
   return (
     <nav className="py-4 px-4 md:px-8 bg-white sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <button
+            onClick={scrollToTop}
+            className="flex items-center space-x-2 bg-transparent border-none cursor-pointer"
+          >
             <div className="w-10 h-10 rounded-full bg-gradient-to-r from-wiseGreen to-wiseMedium flex items-center justify-center">
               <span className="text-wiseDarkGreen font-bold text-xl">W</span>
             </div>
             <span className="text-wiseDarkGreen font-bold text-xl hidden sm:inline-block">
               WISE HEY, KYC!
             </span>
-          </Link>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link
-              to="/"
-              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium"
+            <button
+              onClick={scrollToTop}
+              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium bg-transparent border-none cursor-pointer"
             >
               Главная
-            </Link>
+            </button>
             <button
               onClick={() => scrollToSection("calculator-section")}
               className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium bg-transparent border-none cursor-pointer"
@@ -77,13 +85,12 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              <Link
-                to="/"
-                className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight"
-                onClick={() => setMobileMenuOpen(false)}
+              <button
+                onClick={scrollToTop}
+                className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight text-left"
               >
                 Главная
-              </Link>
+              </button>
               <button
                 onClick={() => scrollToSection("calculator-section")}
                 className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight text-left"
