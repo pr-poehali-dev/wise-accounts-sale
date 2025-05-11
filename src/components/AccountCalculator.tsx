@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 
 const AccountCalculator = () => {
@@ -25,27 +19,23 @@ const AccountCalculator = () => {
   };
 
   return (
-    <Card className="w-full max-w-lg mx-auto shadow-lg">
-      <CardHeader className="bg-wiseLight rounded-t-lg">
-        <CardTitle className="text-2xl text-center text-wiseDarkGreen">
-          Заказать аккаунты WISE
-        </CardTitle>
-      </CardHeader>
-
-      <CardContent className="pt-6 space-y-6">
-        <div className="bg-wiseLight p-6 rounded-lg">
+    <Card className="w-full max-w-lg mx-auto shadow-lg overflow-hidden border-2 border-wiseGreen">
+      <CardContent className="pt-6 space-y-6 bg-white px-6 py-8">
+        <div className="bg-wiseLight p-6 rounded-lg shadow-sm">
           <div className="flex justify-between items-center mb-4">
-            <h3 className="font-bold text-wiseDarkGreen">WISE аккаунт</h3>
+            <h3 className="text-2xl font-bold text-wiseDarkGreen">
+              WISE аккаунт
+            </h3>
             <span className="text-xl font-bold text-wiseDarkGreen">
               {pricePerAccount.toLocaleString()} ₽
             </span>
           </div>
 
           <p className="text-gray-600 mb-6">
-            Полностью верифицированный аккаунт с доступом ко всем функциям Wise.
+            Полностью верифицированный аккаунт с доступом ко всем функциям WISE.
           </p>
 
-          <div className="flex items-center justify-between bg-white p-3 rounded-md">
+          <div className="flex items-center justify-between bg-white p-3 rounded-md border border-gray-200">
             <span className="font-medium text-wiseDarkGreen">
               Количество аккаунтов:
             </span>
@@ -90,8 +80,8 @@ const AccountCalculator = () => {
         </div>
       </CardContent>
 
-      <CardFooter className="flex justify-center">
-        <Button className="w-full bg-gradient-to-r from-wiseGreen to-wiseMedium text-wiseDarkGreen font-medium hover:shadow-lg transition-all">
+      <CardFooter className="flex justify-center bg-gradient-to-r from-wiseGreen to-wiseMedium p-4">
+        <Button className="w-full bg-wiseDarkGreen text-white font-medium hover:bg-opacity-90 transition-all">
           <Icon name="ShoppingCart" className="mr-2" size={18} />
           Заказать сейчас
         </Button>
