@@ -46,7 +46,7 @@ const faqItems: FAQItem[] = [
 
 const FAQ: React.FC = () => {
   return (
-    <div className="py-12 px-4 md:px-8 bg-wiseLight">
+    <div className="py-12 px-4 md:px-8 bg-white">
       <div className="container mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8 text-wiseDarkGreen">
           Часто задаваемые вопросы
