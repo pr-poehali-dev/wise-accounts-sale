@@ -13,7 +13,9 @@ const Footer: React.FC = () => {
               <div className="w-10 h-10 rounded-full bg-wiseGreen flex items-center justify-center">
                 <span className="text-wiseDarkGreen font-bold text-xl">W</span>
               </div>
-              <span className="text-white font-bold text-xl">WiseAccounts</span>
+              <span className="text-white font-bold text-xl">
+                WISE HEY, KYC!
+              </span>
             </div>
             <p className="text-gray-300 text-sm">
               Мы предоставляем доступ к аккаунтам Wise для международных

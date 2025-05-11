@@ -1,5 +1,4 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { Link } from "react-router-dom";
@@ -16,15 +15,37 @@ const Navbar = () => {
             <div className="w-10 h-10 rounded-full bg-gradient-to-r from-wiseGreen to-wiseMedium flex items-center justify-center">
               <span className="text-wiseDarkGreen font-bold text-xl">W</span>
             </div>
-            <span className="text-wiseDarkGreen font-bold text-xl hidden sm:inline-block">WiseAccounts</span>
+            <span className="text-wiseDarkGreen font-bold text-xl hidden sm:inline-block">
+              WISE HEY, KYC!
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium">Главная</Link>
-            <Link to="/prices" className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium">Цены</Link>
-            <Link to="/how-it-works" className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium">Как это работает</Link>
-            <Link to="/faq" className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium">FAQ</Link>
+            <Link
+              to="/"
+              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium"
+            >
+              Главная
+            </Link>
+            <Link
+              to="/prices"
+              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium"
+            >
+              Цены
+            </Link>
+            <Link
+              to="/how-it-works"
+              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium"
+            >
+              Как это работает
+            </Link>
+            <Link
+              to="/faq"
+              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium"
+            >
+              FAQ
+            </Link>
           </div>
 
           {/* Call to Action Button */}
@@ -35,7 +56,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden text-wiseDarkGreen"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
@@ -47,35 +68,35 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
-              <Link 
-                to="/" 
+              <Link
+                to="/"
                 className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Главная
               </Link>
-              <Link 
-                to="/prices" 
+              <Link
+                to="/prices"
                 className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Цены
               </Link>
-              <Link 
-                to="/how-it-works" 
+              <Link
+                to="/how-it-works"
                 className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Как это работает
               </Link>
-              <Link 
-                to="/faq" 
+              <Link
+                to="/faq"
                 className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 FAQ
               </Link>
-              <Button 
+              <Button
                 className="bg-gradient-to-r from-wiseGreen to-wiseMedium text-wiseDarkGreen font-medium hover:shadow-lg transition-all w-full mt-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
