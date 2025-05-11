@@ -29,29 +29,6 @@ const HeroSection: React.FC = () => {
                 Связаться в Telegram
               </Button>
             </div>
-
-            <div className="mt-8 flex items-center">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-wiseMedium border-2 border-white flex items-center justify-center text-white font-bold"
-                  >
-                    {i}
-                  </div>
-                ))}
-              </div>
-              <div className="ml-4">
-                <p className="text-wiseDarkGreen font-medium">
-                  Более 1000 довольных клиентов
-                </p>
-                <div className="flex text-yellow-500 mt-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Icon key={i} name="Star" size={16} />
-                  ))}
-                </div>
-              </div>
-            </div>
           </div>
 
           <div className="md:w-1/2 flex justify-center">
