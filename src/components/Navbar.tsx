@@ -6,6 +6,15 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Функция для плавного скролла к нужному разделу
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <nav className="py-4 px-4 md:px-8 bg-white sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto">
@@ -28,24 +37,24 @@ const Navbar = () => {
             >
               Главная
             </Link>
-            <Link
-              to="/prices"
-              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium"
+            <button
+              onClick={() => scrollToSection("calculator-section")}
+              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium bg-transparent border-none cursor-pointer"
             >
-              Цены
-            </Link>
-            <Link
-              to="/how-it-works"
-              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium"
+              Купить
+            </button>
+            <button
+              onClick={() => scrollToSection("how-it-works")}
+              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium bg-transparent border-none cursor-pointer"
             >
               Как это работает
-            </Link>
-            <Link
-              to="/faq"
-              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium"
+            </button>
+            <button
+              onClick={() => scrollToSection("faq")}
+              className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium bg-transparent border-none cursor-pointer"
             >
               FAQ
-            </Link>
+            </button>
           </div>
 
           {/* Call to Action Button */}
@@ -75,27 +84,24 @@ const Navbar = () => {
               >
                 Главная
               </Link>
-              <Link
-                to="/prices"
-                className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight"
-                onClick={() => setMobileMenuOpen(false)}
+              <button
+                onClick={() => scrollToSection("calculator-section")}
+                className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight text-left"
               >
-                Цены
-              </Link>
-              <Link
-                to="/how-it-works"
-                className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight"
-                onClick={() => setMobileMenuOpen(false)}
+                Купить
+              </button>
+              <button
+                onClick={() => scrollToSection("how-it-works")}
+                className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight text-left"
               >
                 Как это работает
-              </Link>
-              <Link
-                to="/faq"
-                className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight"
-                onClick={() => setMobileMenuOpen(false)}
+              </button>
+              <button
+                onClick={() => scrollToSection("faq")}
+                className="text-wiseDarkGreen hover:text-wiseMedium transition-colors font-medium py-2 px-4 rounded-md hover:bg-wiseLight text-left"
               >
                 FAQ
-              </Link>
+              </button>
               <Button
                 className="bg-gradient-to-r from-wiseGreen to-wiseMedium text-wiseDarkGreen font-medium hover:shadow-lg transition-all w-full mt-2"
                 onClick={() => setMobileMenuOpen(false)}
