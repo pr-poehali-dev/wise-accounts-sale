@@ -1,7 +1,6 @@
+import { defineConfig } from "tailwindcss";
 
-import type { Config } from "tailwindcss";
-
-const config = {
+export default defineConfig({
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -19,12 +18,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        roboto: ["Roboto", "sans-serif"],
+      },
       colors: {
-        wiseGreen: "#9FE870", // Яркий зеленый
-        wiseDarkGreen: "#163300", // Темно-зеленый
-        wiseGray: "#F3F4F6", // Светло-серый для фона
-        wiseLight: "#ECFCE5", // Светло-зеленый для акцентов
-        wiseMedium: "#5F9A3B", // Средне-зеленый для кнопок и элементов
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -58,6 +55,11 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // WISE цвета
+        wiseGreen: "rgb(159, 232, 112)", // RGB: 159, 232, 112
+        wiseDarkGreen: "rgb(22, 51, 0)", // RGB: 22, 51, 0
+        wiseMedium: "rgb(100, 180, 70)", // средний оттенок
+        wiseLight: "rgb(240, 250, 230)", // светлый оттенок
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -90,7 +92,5 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-} satisfies Config;
-
-export default config;
+  plugins: [require("tailwindcss-animate")],
+});
