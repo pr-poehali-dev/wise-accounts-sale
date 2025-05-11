@@ -19,70 +19,53 @@ const AccountCalculator = () => {
   };
 
   return (
-    <Card className="w-full max-w-lg mx-auto shadow-lg overflow-hidden border-2 border-wiseGreen">
-      <CardContent className="pt-6 space-y-6 bg-white px-6 py-8">
-        <div className="bg-wiseLight p-6 rounded-lg shadow-sm">
-          <div className="flex justify-between items-center mb-4">
-            <h3 className="text-2xl font-bold text-wiseDarkGreen">
-              WISE аккаунт
-            </h3>
-            <span className="text-xl font-bold text-wiseDarkGreen">
-              {pricePerAccount.toLocaleString()} ₽
-            </span>
-          </div>
+    <Card className="w-full max-w-md mx-auto bg-white shadow-md rounded-xl overflow-hidden">
+      <CardContent className="p-6">
+        <div className="flex items-center justify-between mb-8">
+          <h3 className="text-xl font-medium text-wiseDarkGreen">
+            WISE аккаунт
+          </h3>
+          <span className="text-xl font-semibold text-wiseDarkGreen">
+            {pricePerAccount.toLocaleString()} ₽
+          </span>
+        </div>
 
-          <p className="text-gray-600 mb-6">
-            Полностью верифицированный аккаунт с доступом ко всем функциям WISE.
-          </p>
-
-          <div className="flex items-center justify-between bg-white p-3 rounded-md border border-gray-200">
-            <span className="font-medium text-wiseDarkGreen">
-              Количество аккаунтов:
-            </span>
-
-            <div className="flex items-center">
-              <Button
-                type="button"
-                size="icon"
-                variant="outline"
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-gray-600">Количество:</span>
+            <div className="flex items-center space-x-4">
+              <button
                 onClick={decreaseQuantity}
-                className="h-8 w-8 border-wiseDarkGreen text-wiseDarkGreen"
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 transition-colors"
                 disabled={quantity <= 1}
               >
                 <Icon name="Minus" size={16} />
-              </Button>
+              </button>
 
-              <span className="mx-4 font-bold text-xl text-wiseDarkGreen w-6 text-center">
+              <span className="font-medium text-lg text-wiseDarkGreen w-4 text-center">
                 {quantity}
               </span>
 
-              <Button
-                type="button"
-                size="icon"
-                variant="outline"
+              <button
                 onClick={increaseQuantity}
-                className="h-8 w-8 border-wiseDarkGreen text-wiseDarkGreen"
+                className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 text-gray-500 hover:bg-gray-50 transition-colors"
               >
                 <Icon name="Plus" size={16} />
-              </Button>
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Итоговая стоимость */}
-        <div className="bg-wiseDarkGreen p-4 rounded-lg text-white">
-          <div className="flex justify-between items-center">
-            <h3 className="font-bold">Итоговая стоимость:</h3>
-            <span className="text-2xl font-bold">
-              {totalPrice.toLocaleString()} ₽
-            </span>
-          </div>
+        <div className="flex items-center justify-between mb-2 pt-4 border-t border-gray-100">
+          <span className="text-gray-600 text-sm">Итого:</span>
+          <span className="text-2xl font-bold text-wiseDarkGreen">
+            {totalPrice.toLocaleString()} ₽
+          </span>
         </div>
       </CardContent>
 
-      <CardFooter className="flex justify-center bg-gradient-to-r from-wiseGreen to-wiseMedium p-4">
-        <Button className="w-full bg-wiseDarkGreen text-white font-medium hover:bg-opacity-90 transition-all">
-          <Icon name="ShoppingCart" className="mr-2" size={18} />
+      <CardFooter className="px-6 pb-6 pt-0">
+        <Button className="w-full bg-wiseDarkGreen text-white font-medium transition-all py-6">
           Заказать сейчас
         </Button>
       </CardFooter>
