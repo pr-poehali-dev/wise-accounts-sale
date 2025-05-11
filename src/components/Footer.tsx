@@ -1,6 +1,5 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import Icon from "@/components/ui/icon";
 
 const Footer: React.FC = () => {
@@ -17,65 +16,112 @@ const Footer: React.FC = () => {
               <span className="text-white font-bold text-xl">WiseAccounts</span>
             </div>
             <p className="text-gray-300 text-sm">
-              Мы предоставляем доступ к аккаунтам Wise для международных переводов и мультивалютных операций.
+              Мы предоставляем доступ к аккаунтам Wise для международных
+              переводов и мультивалютных операций.
             </p>
           </div>
-          
+
           {/* Quick Links */}
           <div className="col-span-1">
             <h3 className="text-lg font-bold mb-4 text-wiseGreen">Ссылки</h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link to="/" className="hover:text-wiseGreen transition-colors">Главная</Link>
+                <Link to="/" className="hover:text-wiseGreen transition-colors">
+                  Главная
+                </Link>
               </li>
               <li>
-                <Link to="/prices" className="hover:text-wiseGreen transition-colors">Цены</Link>
+                <Link
+                  to="/prices"
+                  className="hover:text-wiseGreen transition-colors"
+                >
+                  Цены
+                </Link>
               </li>
               <li>
-                <Link to="/how-it-works" className="hover:text-wiseGreen transition-colors">Как это работает</Link>
+                <Link
+                  to="/how-it-works"
+                  className="hover:text-wiseGreen transition-colors"
+                >
+                  Как это работает
+                </Link>
               </li>
               <li>
-                <Link to="/faq" className="hover:text-wiseGreen transition-colors">FAQ</Link>
+                <Link
+                  to="/faq"
+                  className="hover:text-wiseGreen transition-colors"
+                >
+                  FAQ
+                </Link>
               </li>
             </ul>
           </div>
-          
+
           {/* Legal Info */}
           <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4 text-wiseGreen">Правовая информация</h3>
+            <h3 className="text-lg font-bold mb-4 text-wiseGreen">
+              Правовая информация
+            </h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <Link to="/terms" className="hover:text-wiseGreen transition-colors">Условия использования</Link>
+                <Link
+                  to="/terms"
+                  className="hover:text-wiseGreen transition-colors"
+                >
+                  Условия использования
+                </Link>
               </li>
               <li>
-                <Link to="/privacy" className="hover:text-wiseGreen transition-colors">Политика конфиденциальности</Link>
+                <Link
+                  to="/privacy"
+                  className="hover:text-wiseGreen transition-colors"
+                >
+                  Политика конфиденциальности
+                </Link>
               </li>
               <li>
-                <Link to="/refund" className="hover:text-wiseGreen transition-colors">Политика возврата</Link>
+                <Link
+                  to="/refund"
+                  className="hover:text-wiseGreen transition-colors"
+                >
+                  Политика возврата
+                </Link>
               </li>
             </ul>
           </div>
-          
+
           {/* Contact Us */}
           <div className="col-span-1">
-            <h3 className="text-lg font-bold mb-4 text-wiseGreen">Связаться с нами</h3>
+            <h3 className="text-lg font-bold mb-4 text-wiseGreen">
+              Связаться с нами
+            </h3>
             <ul className="space-y-3 text-gray-300">
               <li className="flex items-center">
                 <Icon name="Mail" size={16} className="mr-2" />
-                <a href="mailto:contact@wiseaccounts.com" className="hover:text-wiseGreen transition-colors">
+                <a
+                  href="mailto:contact@wiseaccounts.com"
+                  className="hover:text-wiseGreen transition-colors"
+                >
                   contact@wiseaccounts.com
                 </a>
               </li>
               <li className="flex items-center">
                 <Icon name="MessageCircle" size={16} className="mr-2" />
-                <a href="https://t.me/wiseaccounts" target="_blank" rel="noopener noreferrer" className="hover:text-wiseGreen transition-colors">
+                <a
+                  href="https://t.me/wiseaccounts"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-wiseGreen transition-colors"
+                >
                   Telegram: @wiseaccounts
                 </a>
               </li>
             </ul>
-            
+
             <div className="mt-6">
-              <h4 className="text-sm font-semibold mb-3 text-wiseGreen">Мы принимаем</h4>
+              <h4 className="text-sm font-semibold mb-3 text-wiseGreen">
+                Мы принимаем
+              </h4>
               <div className="flex space-x-3">
                 <Icon name="CreditCard" size={24} className="text-gray-300" />
                 <Icon name="Bitcoin" size={24} className="text-gray-300" />
@@ -84,12 +130,14 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} WiseAccounts. Все права защищены.</p>
+          <p>
+            &copy; {new Date().getFullYear()} WiseAccounts. Все права защищены.
+          </p>
           <p className="mt-1 text-xs">
-            Wise является зарегистрированным товарным знаком Wise Payments Limited. 
-            Наш сервис не связан с Wise Payments Limited.
+            WISE является зарегистрированным товарным знаком Wise Payments
+            Limited. Наш сервис не связан с Wise Payments Limited.
           </p>
         </div>
       </div>

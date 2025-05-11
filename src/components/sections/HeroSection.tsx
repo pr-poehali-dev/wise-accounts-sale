@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
@@ -12,10 +11,10 @@ const HeroSection: React.FC = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-wiseDarkGreen leading-tight">
               Получите доступ к{" "}
               <span className="text-gradient">международным финансам</span> с
-              аккаунтом Wise
+              аккаунтом WISE
             </h1>
             <p className="text-gray-700 text-lg mb-8 max-w-lg">
-              Мы предлагаем верифицированные аккаунты Wise для международных
+              Мы предлагаем верифицированные аккаунты WISE для международных
               переводов, мультивалютных операций и глобальных платежей.
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">

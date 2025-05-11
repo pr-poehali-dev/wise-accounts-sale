@@ -1,4 +1,3 @@
-
 import React from "react";
 import AccountCalculator from "@/components/AccountCalculator";
 import Icon from "@/components/ui/icon";
@@ -12,7 +11,7 @@ const PricingSection: React.FC = () => {
             Наши предложения
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Рассчитайте стоимость аккаунта Wise в соответствии с вашими
+            Рассчитайте стоимость аккаунта WISE в соответствии с вашими
             потребностями
           </p>
         </div>

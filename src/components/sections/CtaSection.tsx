@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
@@ -11,7 +10,7 @@ const CtaSection: React.FC = () => {
           Готовы начать работу с международными финансами?
         </h2>
         <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-          Приобретите ваш аккаунт Wise сегодня и получите доступ к глобальным
+          Приобретите ваш аккаунт WISE сегодня и получите доступ к глобальным
           финансовым возможностям
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
