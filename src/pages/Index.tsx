@@ -1,4 +1,3 @@
-
 import React from "react";
 import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/ProductCard";
@@ -16,9 +15,9 @@ const products = [
       "Верифицированный аккаунт",
       "Доступ к основным валютам",
       "Стандартные лимиты переводов",
-      "Поддержка в течение 7 дней"
+      "Поддержка в течение 7 дней",
     ],
-    popular: false
+    popular: false,
   },
   {
     title: "Стандартный",
@@ -28,9 +27,9 @@ const products = [
       "Повышенные лимиты переводов",
       "Бизнес-функции",
       "Дополнительные валюты",
-      "Поддержка в течение 14 дней"
+      "Поддержка в течение 14 дней",
     ],
-    popular: true
+    popular: true,
   },
   {
     title: "Премиум",
@@ -40,42 +39,44 @@ const products = [
       "Максимальные лимиты переводов",
       "Полный доступ ко всем валютам",
       "Расширенная верификация",
-      "Безлимитная поддержка"
+      "Безлимитная поддержка",
     ],
-    popular: false
-  }
+    popular: false,
+  },
 ];
 
 const benefits = [
   {
     icon: "Globe",
     title: "Глобальные переводы",
-    description: "Отправляйте деньги в более чем 80 стран мира с минимальными комиссиями"
+    description:
+      "Отправляйте деньги в более чем 80 стран мира с минимальными комиссиями",
   },
   {
     icon: "DollarSign",
     title: "Мультивалютный счёт",
-    description: "Храните и управляйте деньгами в 50+ валютах на одном счете"
+    description: "Храните и управляйте деньгами в 50+ валютах на одном счете",
   },
   {
     icon: "CreditCard",
     title: "Международная карта",
-    description: "Получите доступ к мультивалютной карте для платежей по всему миру"
+    description:
+      "Получите доступ к мультивалютной карте для платежей по всему миру",
   },
   {
     icon: "Zap",
     title: "Мгновенный доступ",
-    description: "Получите полностью настроенный аккаунт в течение 24 часов"
+    description: "Получите полностью настроенный аккаунт в течение 24 часов",
   },
   {
     icon: "Shield",
     title: "Безопасность",
-    description: "Все аккаунты защищены современными методами шифрования"
+    description: "Все аккаунты защищены современными методами шифрования",
   },
   {
     icon: "Users",
     title: "Техническая поддержка",
-    description: "Наши специалисты готовы помочь вам с любыми вопросами"
+    description: "Наши специалисты готовы помочь вам с любыми вопросами",
   },
 ];
 
@@ -83,38 +84,49 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      
+
       {/* Hero Section */}
       <section className="pt-16 pb-24 px-4 md:px-8 bg-gradient-to-b from-wiseLight to-white">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-wiseDarkGreen leading-tight">
-                Получите доступ к <span className="text-gradient">международным финансам</span> с аккаунтом Wise
+                Получите доступ к{" "}
+                <span className="text-gradient">международным финансам</span> с
+                аккаунтом Wise
               </h1>
               <p className="text-gray-700 text-lg mb-8 max-w-lg">
-                Мы предлагаем верифицированные аккаунты Wise для международных переводов, мультивалютных операций и глобальных платежей.
+                Мы предлагаем верифицированные аккаунты Wise для международных
+                переводов, мультивалютных операций и глобальных платежей.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                 <Button className="bg-gradient-to-r from-wiseGreen to-wiseMedium text-wiseDarkGreen font-medium hover:shadow-lg transition-all px-8 py-6 text-lg">
                   Заказать аккаунт
                 </Button>
-                <Button variant="outline" className="border-wiseDarkGreen text-wiseDarkGreen hover:bg-wiseLight py-6 text-lg">
+                <Button
+                  variant="outline"
+                  className="border-wiseDarkGreen text-wiseDarkGreen hover:bg-wiseLight py-6 text-lg"
+                >
                   <Icon name="MessageCircle" className="mr-2" />
                   Связаться в Telegram
                 </Button>
               </div>
-              
+
               <div className="mt-8 flex items-center">
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
-                    <div key={i} className="w-10 h-10 rounded-full bg-wiseMedium border-2 border-white flex items-center justify-center text-white font-bold">
+                    <div
+                      key={i}
+                      className="w-10 h-10 rounded-full bg-wiseMedium border-2 border-white flex items-center justify-center text-white font-bold"
+                    >
                       {i}
                     </div>
                   ))}
                 </div>
                 <div className="ml-4">
-                  <p className="text-wiseDarkGreen font-medium">Более 1000 довольных клиентов</p>
+                  <p className="text-wiseDarkGreen font-medium">
+                    Более 1000 довольных клиентов
+                  </p>
                   <div className="flex text-yellow-500 mt-1">
                     {[1, 2, 3, 4, 5].map((i) => (
                       <Icon key={i} name="Star" size={16} />
@@ -123,57 +135,64 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="md:w-1/2 flex justify-center">
-              <img 
-                src="https://images.unsplash.com/photo-1616514197671-15d99ce7a6f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                alt="Wise Account"
-                className="rounded-lg shadow-xl max-w-md w-full object-cover"
-              />
+              {/* Здесь была фотография - удалена */}
             </div>
           </div>
         </div>
       </section>
-      
+
       {/* Benefits Section */}
       <section className="py-16 px-4 md:px-8 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-wiseDarkGreen">Преимущества аккаунтов Wise</h2>
+            <h2 className="text-3xl font-bold mb-4 text-wiseDarkGreen">
+              Преимущества аккаунтов Wise
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Откройте для себя мир финансовых возможностей с международным аккаунтом Wise
+              Откройте для себя мир финансовых возможностей с международным
+              аккаунтом Wise
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-wiseLight rounded-lg p-6 card-hover">
+              <div
+                key={index}
+                className="bg-wiseLight rounded-lg p-6 card-hover"
+              >
                 <div className="w-12 h-12 rounded-full bg-wiseGreen flex items-center justify-center mb-4">
                   <div className="text-wiseDarkGreen">
                     <Icon name={benefit.icon} size={24} />
                   </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-2 text-wiseDarkGreen">{benefit.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-wiseDarkGreen">
+                  {benefit.title}
+                </h3>
                 <p className="text-gray-600">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
-      
+
       {/* Pricing Section */}
       <section className="py-16 px-4 md:px-8 bg-wiseLight">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4 text-wiseDarkGreen">Наши предложения</h2>
+            <h2 className="text-3xl font-bold mb-4 text-wiseDarkGreen">
+              Наши предложения
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Выберите подходящий тип аккаунта Wise в соответствии с вашими потребностями
+              Выберите подходящий тип аккаунта Wise в соответствии с вашими
+              потребностями
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {products.map((product, index) => (
-              <ProductCard 
+              <ProductCard
                 key={index}
                 title={product.title}
                 price={product.price}
@@ -184,32 +203,38 @@ const Index = () => {
           </div>
         </div>
       </section>
-      
+
       {/* How It Works Section */}
       <HowItWorks />
-      
+
       {/* FAQ Section */}
       <FAQ />
-      
+
       {/* CTA Section */}
       <section className="py-16 px-4 md:px-8 bg-wiseDarkGreen">
         <div className="container mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 text-white">Готовы начать работу с международными финансами?</h2>
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Готовы начать работу с международными финансами?
+          </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-            Приобретите ваш аккаунт Wise сегодня и получите доступ к глобальным финансовым возможностям
+            Приобретите ваш аккаунт Wise сегодня и получите доступ к глобальным
+            финансовым возможностям
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Button className="bg-wiseGreen text-wiseDarkGreen font-medium hover:bg-opacity-90 transition-all px-8 py-6 text-lg">
               Заказать аккаунт
             </Button>
-            <Button variant="outline" className="border-wiseGreen text-wiseGreen hover:bg-wiseDarkGreen hover:bg-opacity-80 py-6 text-lg">
+            <Button
+              variant="outline"
+              className="border-wiseGreen text-wiseGreen hover:bg-wiseDarkGreen hover:bg-opacity-80 py-6 text-lg"
+            >
               <Icon name="MessageCircle" className="mr-2" />
               Задать вопрос
             </Button>
           </div>
         </div>
       </section>
-      
+
       {/* Footer */}
       <Footer />
     </div>
