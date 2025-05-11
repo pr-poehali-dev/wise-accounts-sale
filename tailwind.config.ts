@@ -1,6 +1,7 @@
-import { defineConfig } from "tailwindcss";
 
-export default defineConfig({
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -19,9 +20,13 @@ export default defineConfig({
     },
     extend: {
       fontFamily: {
-        roboto: ["Roboto", "sans-serif"],
+        sans: ["Roboto", "sans-serif"],
       },
       colors: {
+        wiseGreen: "rgb(159, 232, 112)",
+        wiseDarkGreen: "rgb(22, 51, 0)",
+        wiseMedium: "rgb(120, 180, 85)",
+        wiseLight: "rgb(230, 245, 220)",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -55,11 +60,6 @@ export default defineConfig({
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // WISE цвета
-        wiseGreen: "rgb(159, 232, 112)", // RGB: 159, 232, 112
-        wiseDarkGreen: "rgb(22, 51, 0)", // RGB: 22, 51, 0
-        wiseMedium: "rgb(100, 180, 70)", // средний оттенок
-        wiseLight: "rgb(240, 250, 230)", // светлый оттенок
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -77,20 +77,17 @@ export default defineConfig({
         },
         "fade-in": {
           "0%": { opacity: "0", transform: "translateY(10px)" },
-          "100%": { opacity: "1", transform: "translateY(0)" },
-        },
-        "fade-out": {
-          "0%": { opacity: "1", transform: "translateY(0)" },
-          "100%": { opacity: "0", transform: "translateY(10px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" }
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in": "fade-in 0.3s ease-out",
-        "fade-out": "fade-out 0.3s ease-out",
       },
     },
   },
   plugins: [require("tailwindcss-animate")],
-});
+};
+
+export default config;
